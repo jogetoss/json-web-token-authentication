@@ -1,0 +1,88 @@
+[
+    {
+        "title": "@@title.openid.details@@",
+        "properties": [
+            {
+                "name": "callbackUrl",
+                "label": "@@properties.callback.url@@",
+                "type": "label",
+                "value": "%s",
+                "description": "Provide this Callback URL to your oauth2 proxy."
+            },
+            {
+                "name": "outh2ProxyURL",
+                "label": "@@properties.outh2Proxy.url@@",
+                "type": "textfield",
+                "value": "",
+                "required": "true"
+            },
+            {
+                "name": "userProvisioning",
+                "label": "@@properties.user.provision@@",
+                "type": "checkbox",
+                "value": "true",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "@@title.configure.button@@",
+        "properties": [
+            {
+                "name": "buttonText",
+                "label": "@@properties.button.label.text@@",
+                "type": "textfield",
+                "required": "true",
+                "value": "Login"
+            },
+            {
+                "name": "buttonIcon",
+                "label": "@@properties.button.icon@@",
+                "type": "textfield",
+                "description": "Sample: fas fa-arrow-right",
+                "required": "true",
+                "value": "fas fa-arrow-right"
+            },
+            {
+                "name": "buttonTextColor",
+                "label": "@@properties.button.textcolor@@",
+                "type" : "color",
+                "required": "true",
+                "value": "white"
+            },
+            {
+                "name": "buttonBackgroundColor",
+                "label": "@@properties.button.background@@",
+                "type" : "color",
+                "required": "true",
+                "value": "blue"
+            },
+            {
+                "name": "buttonBorderColor",
+                "label": "@@properties.button.bordercolor@@",
+                "type" : "color",
+                "required": "true",
+                "value": "white"
+            }
+        ]
+    },
+    %s,
+            {
+                "title": "@@app.edm.label.addonDirectorManager@@",
+                "properties": [
+                    {
+                        "name": "dm1",
+                        "label": "@@app.edm.label.addon@@",
+                        "type": "elementselect",
+                        "options_ajax": "[CONTEXT_PATH]/web/json/plugin/org.joget.plugin.directory.SecureDirectoryManager/service",
+                        "url": "[CONTEXT_PATH]/web/property/json/getPropertyOptions"
+                    }
+                    %s
+                ]
+            }
+]
