@@ -1,6 +1,8 @@
 # Description
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+**JSON Web Token Authentication** plugin enables passing of authentication payload in the form of JSON web token to Joget for authentication.
+
+Read documentation at https://dev.joget.org/community/display/marketplace/JSON+Web+Token+Authentication
 
 # Getting Help
 
