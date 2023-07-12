@@ -157,7 +157,8 @@ public class JsonWebTokenDirectoryManager extends SecureDirectoryManager {
             Iterator<String> keys = jsonObject.keys();
             while (keys.hasNext()) {
                 String key = keys.next();
-                UserInfo.put(key, jsonObject.getString(key));
+                String value = jsonObject.get(key).toString();
+                UserInfo.put(key, value);
             }
         } catch (Exception ex) {
             LogUtil.error(JsonWebTokenDirectoryManager.class.getName(), ex, "");
